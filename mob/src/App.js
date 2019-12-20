@@ -22,21 +22,21 @@ handleClick=(backgroundColor)=>()=>{
     return (
       <div
         style={{
-          position: "absolute",
           backgroundColor: this.state.backgroundColor,
           width:'100vw',
-          height:'100vh'
+          height:'100vh',
+          
         }}
       >
-        <Row type="flex" justify="center" align='middle'>
+        <Row type="flex" justify="center" align='middle' style={{position: "absolute", top: "50%", left: "50%"}}>
           <Col >
             <Button onClick = {this.handleClick('blue')}>BLUE</Button>
           </Col>
           <Col>
-            <Button>RED</Button>
+            <Button onClick = {this.handleClick('red')}>RED</Button>
           </Col>
           <Col>
-            <Button>YELLOW</Button>
+            <Button onClick = {this.handleClick('yellow')}>YELLOW</Button>
           </Col>
         </Row>
       </div>
